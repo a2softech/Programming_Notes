@@ -1,0 +1,87 @@
+Laravel8   : purane version ke bare me kuch janne ki jrurat nahi h
+	PHP Framework
+	Developing web app and API(Send data in frontend side)
+	Open Source
+	Modern Framework(work on cmd) and Easy to use
+	PHP me jyada use hone vala Laravel h
+History
+	First : June 2011
+	Current Version : 8.0
+	Developer Name : Taylor Otwell
+	Written in : PHP
+Why:
+	Strong command line support(bahut sahi chij cmd se hi kr sakte h)
+	Large community
+	Regular update (1 saal me 2 update to aate hi rehte h)
+	Fast and Simple
+Topic Cover:
+	Basics
+	dB
+	API
+	Project
+	New Feature
+	Interview Question
+Download Composer
+	There is have 4 cammand, last cammand for uninstall
+	https://getcomposer.org/download/
+	Run 3 cammand
+	#composer : type this cammand and check composer is intalled or not
+??Laravel ko without composer bhi use kr sakte h
+	https://php-download.com/package/laravel/laravel
+	isse download kr sakte h
+??Agar laravel ka version change krna h to #composer.json file me jake "laravel/framework" me jo bhi version chahiye vo likh do, phir compose update cmd chala do.
+??composer se koi si bhi liberary easy install kr sakte h
+Laravel Installation
+	https://laravel.com/docs/8.x/installation
+		laravel documentation ispe have
+	#composer global require laravel/installer
+		to create install laravel
+	#laravel: type to have or not laravel
+	#laravel new project_name(blog)
+		blog is my project name
+Composer Update
+	#composer update
+		is cammand se composer update ho jayega, composer.json me change krke ke baad ise run kr dena h, usi project ke under ye cmd chalana h
+Run/Start Server
+	#php artisan serve
+		server start ho jayege, wamp ki jrurat nahi prti h
+Make Page
+	resourse.views=is name ke folder ke under hum vo phpHtml page bnate h jise dikhana h, page bnate h
+	routes.web.php=page ka route define krte h, function call hota h, and konsi url pr konsa page run hona chahiye ye hum configure kr sakte h
+	anchorTag=<a href="show"></a>
+		agar aisa kisi bhi page me likha to click krne pr vo show vale page pr le jayega
+404ErrorPageMaker
+	Route::get('/show/{id}', function ($id) {
+		return view('show',["id"=>$id]);	
+		});
+	and ab show.blade.php me jake jaha pr bhi print krna h, vaha pr
+	<?php echo $id; ?>
+		ise likh dena h, vaha pr print ho jayega
+Page Redirect(Agar koi is URL pr aaye to ye redirect kr de)
+	Route::redirect('/second','show');
+		second pr koi url aaye to show vale page pr redirect ho jaye and show page open ho jaye
+Controller
+	MVC ka part hota h, central processing unit hoti h, data show , middleware part, logic bhi yahi pr likhte h,
+Controller Kaise Bnate h
+	app.Http.Controllers
+		is location pr controller bnta h
+	#php artisan make:controller Users
+		Users Controller ka name h, is name se controller bnaya h, or ye us locaiton pr bn gya h, Users.php ke name se file bni hogi
+	app.Http.Controller.Users.php
+		<?php
+			namespace App\Http\Controllers;
+			use Illuminate\Http\Request;
+			class Users extends Controller
+			{
+				//
+			}
+		?>
+		Aisa code bn jayega
+		ab isme class ke under function bnana prega call krne ke liye
+		    public function index()
+				{
+					echo "Hiy This is a function";
+				}
+		iske under aisa function bna liya, ab ise route se call krege	
+		Route me jeke 
+		Route::get('index','App\Http\Controllers\Aakash@data');

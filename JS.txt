@@ -1,0 +1,236 @@
+name="Ankit";
+console.log("Hello, ");
+let x;var x;  # both are same
+let x = 3;
+let x=3,y=2,z=3;
+let x="Hello",y=2,z=3.4;
+let x = 'Hello'; #valid
+let _x= 'Hello'; #valid
+let $x= 'Hello'; #valid
+let 1x= 'Hello'; #inValid
+let new='Hello'; #inValid
+let x="Hiy"; #Case-Sensitive
+let X="Hiy"; #Case-Sensitive(Both Diff)
+let new=4;   #error bcz.new is keyword
+const x=5;   #its as a final word,constant
+const x;	 #Error
+string--"",'',``,${var_name}
+number--
+bigint
+boolean
+undefined
+null
+symbol('Hello')
+object
+let num=3/0; == Infinity
+let num=-3/0; == -Infinity
+let num="a"/3; == NaN
+let stdnt={f:'ram',l='pal'}; #obj   stdnt[1]
+typeof(a);	#check dataType
+=
++=   a+=5,a=a+5
+-=
+*=
+/=
+%=
+**=      9**2=81
+++
+--
+==    "54"==54 op: true
+!=
+===		"54"===54 op: false
+!==
+>
+<
+>=
+<=
+&&
+||
+!
+&     BitWise Start
+|
+^
+~
+<<		Left Shift
+>>		Sign-propagating right Shift
+>>>		Zero-fill right shift
++		Concatinate
+,		Evaluate value
+?:		condition based
+delete	delete object
+typeof	check type
+void	discard return value
+in		property of obj present?
+instanceof	obj instance obType
+number("4334")
+'5'+2;			'52'
+'5'+true;		'5true'
+'3'+undefined;	'3undefined'
+'3'+null;		'3null'
+'4'-'2';		2
+'4'-2;			2
+'4'*2;			8
+'4'/2;			2
+'hello'-'word';	NaN
+'4'-'hello';	NaN
+'4'-true;		3{true:1,false:0}
+4+true;			5
+4+false;		4
+4+null;			4{null:0}
+4-null;			4
+4+undefined;	NaN
+4-undefined;	NaN
+true+undefined;	NaN
+null+undefined;	NaN
+Number('345');	345
+Number('345e+3);34.5    345*10^3
+Number(true);	1
+Number(false);	0
+Number(null);	0
+Number(' ');	0
+Number('Hello');NaN
+Number(undefined);	NaN
+Number(NaN);	NaN
+parseInt('20.01');	20 {String to Number}
+parseFloat('20.01);	20.01
++'20.01';			20.01
+Math.floor('20.01');20	{Round Figure}
+String(345);	"345" {To String}
+String(2+3);	"5"
+String(null);	"null"
+String(undefined);	"undefined"
+String(NaN);	"NaN"
+String(true);	"true"
+String(false);	"false"
+a=(345).toString();	"345"
+a=true.toString();	"true"
+Boolean('');	false {Boolean}
+Boolean(0);		false
+Boolean(undefined);	false
+Boolean(null);	false
+Boolean(NaN);	false
+Boolean(345);	true
+Boolean('hiy');	true
+boolean(' ');	true
+if(cond.){}		[if true,then enter]
+if(){}else{}	[if.else]
+if(){}else if(){} else {}		[Nested If]
+for(let ini;cond.;inc/dec){}		[for Loop]
+while(cond.){}		[if true,then enter]
+prompt('Enter Number');	[Input User]
+do{body}while(con.)	[run,then check]
+while(true){}		[loop run infinite times]
+do{}while(true)		[loop run infinite times]
+break;			[stop the iteration]
+continue;		[skip the iteration]
+switch(val){
+	case val1:
+		break;
+	default:
+		.....
+	}
+try{}catch(error){}
+try{}catch(error){}finally(){}
+try{}catch(e){}finally(){}
+#Function Start
+function funname(){body}	[function make]
+funname();		[Calling function]
+funfunction funname(param){body}
+funname(aakash);
+function add(a,b){}		[param/func]
+function add(a,b){return a+b;}
+let x=function(num){return num+2};
+	x(4);		[fit-param]
+	let y=x(7);
+global/local variable
+let x=3; global
+let x=4; Under Func. it's local
+? variable initialization first then used
+? we can call function before make
+#Recursion
+function recurse(){
+	recurse();
+	}
+	recurse();		[func. under func. call]
+function countDown(number){
+	console.log(number);
+	let newNum=number-1;
+	if(newNum>0){
+		countDown(newNum);
+		}
+	}			op: 4 3 2 1	
+#Objects
+let obj_name={				[create object]
+	key1:val1,key2:val2
+	}
+let stdnt={				
+	fname:'ram',class:5
+	};
+	typeof(stdnt);		op:object
+let stdnt={fname:'ram',class:4};
+console.log(stdnt.fname);	op:ram
+console.log(stdnt.class);	op:4
+console.log(stdnt['fname']);op:ram
+let stdnt={				[make nested object]
+	fname:'ram',
+	class:8,
+	marks:{
+		science:45,
+		maths:93
+		}
+	}
+	c.l(stdnt.marks);	op:{science:45,maths:93}
+	c.l(stdnt.marks.maths);	op:93
+let stdnt={				[make obj. func.]
+	fname:'ram',
+	age:38
+	myFun:function(){body}
+	}
+	stdnt.myFun();		[call obj function]
+let dt=parseInt('42.22');	op:42
+let stdnt={};		[create blank obj]
+		stdnt.name='ram';
+		stdnt.myFun=function(){body}
+	stdnt.myFun();	[body execute]
+#this keyword
+let stdnt={		[local obj property call use this keyword]
+	name:'ram',
+	age:32,	
+	myFun:function(){this.name}		op:ram
+	}		
+#Constructor [it's used for create object]
+function stdnt(){
+	this.name='ram',
+	this.age=23
+	}
+	let std=new stdnt();	[object created]
+	let std2=new stdnt();	[create multi obj]
+	c.l(std.name);			op:ram
+	c.l(std2.name);			op:ram
+function stdnt(name,age,gen){
+	this.name=name,
+	this.age=age,
+	this.gen=gen
+	this.myFun=function(){
+		return ("Hiy"+this.name);
+		}
+	}
+	let s1=new stdnt('ram',23,'m');		[crate obj and pass param]
+	let s2=new stdnt('shyam',23,'m');
+	c.l(s1.name);		[call var_value]
+	c.l(s2.name);
+	
+	#second method
+	let s1=new stdnt('ram',32,'m');
+	s1.city='bhopal';		[add new property in s1 obj.]
+#object (literal)=create a single object, that'swhy we used
+#constructor(function)=create multiple object, that'swhy we used
+#object ki copy bnaye, usme edit kre, to main vali me hi edit ho jayega [drawbag]
+stdnt.prototype.gen='Male';		[pure prototype/function me ye set ho jayega,s2 bhi access kr sakta h use ab]
+#buildIn function ke bhi object bna sakte he
+let a = new String();
+let a = new Object();
+let a = new Number();
+let a = new Boolean();
+let name = new String('ram');
+c.l(name);		op:ram

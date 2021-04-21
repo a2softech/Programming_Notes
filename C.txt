@@ -1,0 +1,109 @@
+C is a powerful general pupose programming language , it cn be used to develop software like os,database,compiler,and so on C.
+C Keyword:reserve word
+	upperCase,loverCase,numeric,special,character
+int age=5;
+	keyword is int
+	age is identifier
+There is only 32 keyword
+identifier 31 se jyada nahi hona chahiye, vaise koi problem nahi h, but, problem aa sakti h
+Variable:
+int:
+float:
+char:
+Escape Sequence
+	\b:backspace
+	\n:newline
+	\r:return
+	\t:horizontal tab
+	\v:vertical tab
+	\\: using \
+	\': using '
+	\": using "
+	\?: using ?
+	\0: Null character
+string
+Constants
+	const int PI=3.14;
+==>Data Type
+int	at least 2, usually 4	%d, %i
+char	1	%c
+float	4	%f
+double	8	%lf
+short int	2 usually	%hd
+unsigned int	at least 2, usually 4	%u
+long int	at least 4, usually 8	%ld, %li
+long long int	at least 8	%lld, %lli
+unsigned long int	at least 4	%lu
+unsigned long long int	at least 8	%llu
+signed char	1	%c
+unsigned char	1	%c
+long double	at least 10, usually 12 or 16	%Lf
+==>End<==
+sizeof(age);		#Check Size of variable
+#include<stdio.h>	#libery of printf and scanf
+https://fresh2refresh.com/c-programming/c-function/stdio-h-library-functions/
+	All function is link me diye huye h
+printf("");			#Display of the output
+=>int age = 28;
+	printf("Your age is %d/%i",age);
+=>int age;
+	scanf("%d/%i",&age);	#age variable me value scan hoke store ho jayegi
+	scanf("%c%i",&alphabate,&age);	#multi value store
+ASCII:value bhi %c char ke form me hi store hogi
+==>Operators
+Arithmetic
+	+
+	-
+	*
+	/
+	%(Mode)
+Increment/Decrement
+	++
+	--
+Assignment Operators
+	=
+	+=
+	-=
+	*=
+	/=
+	%=
+Relational
+	==
+	>
+	<
+	!=
+	>=
+	<=
+Logical Operators
+	&&
+	||
+	!
+Bitwise Operators
+	&
+	|
+	^
+	~
+	<<
+	>>
+Other Operators
+	,		Comma
+	?:		Ternary Operator
+	&		Reference Operator
+	*		DeReference Operator
+	->		Member selection operator
+=========================
+Control Flow
+if(){}
+if(){}else{}
+if(){}else if(){} else{}
+nested if			:if ke under if
+if(age<18)
+	printf("Not Eligible");
+	//agar single line if ke under h to use hum without curlyBracket bhi likh sakte h
+***Loop
+forLoop
+whileLoop
+doWhileLoop
+for(int x=0;x<11;x++){}
+for(initializationStatement;testExpression;updateStatement){}	
+while(testExpression){}

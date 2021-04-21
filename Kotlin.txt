@@ -1,0 +1,84 @@
+2 type execute : 
+	cmd(notepad)
+	IDE()
+var : changable
+val : final word
+var temp:Int=10	,,ex of assign var
+var i:Int		,,only declare
+var temp2=43
+
+var a:Int=42
+var b:Int=3
+var c:Int=a+b
+println("Sub of ${c}")
+
+Long
+Double
+Char		,,single character
+Boolean		,,true,false store
+
+var name = arrayOf("sachine","rahul","arjun")
+println(name[2])		,,op: arjun
+println(name.size)		,,op:3
+
+var name2="Aakash"
+println(name2)			,,string
+println(name2.length)	,,length count
+name2.toUpperCase()
+name2.toLowerCase()
+
+#type conversion
+toByte()
+toInt()
+toLong()
+toFloat()
+toDouble()
+toShort()
+
+var v:Int=123
+var l:Long=v.toLong()
+println(l)			,,2323
+
+#Operators
+a+b--------same as -- a.plus(b)
+minus
+all basic operator like as java
+Logical && || !
+
+#input
+readLine()			,,only String input
+var name=readLine()
+,,if, want int value, 
+	then, same as java Scanner
+readLine()?.toInt()
+
+#if else
+same as all language
+
+#when (Not Switch here)
+var day=1
+var data=when(day)
+	{
+		1->"Monday"
+		2->"Tuesday"
+		.
+		.
+		in 3..10->"surprise"		,,3 se 10 ke bich me ye hi dega, ye syntex h
+		else->"invalid"
+	}
+	println("Day is ${data}")
+	
+#for Loop
+for(var i in data){
+		
+	}
+for (var i in 1..10){}  ,,1 se 10 tk chalega
+for (i in 1..10 downTo 1){}  ,,10 se 1 tk chalega
+for (i in 1..10 step 2){}	,,2 ke step me chalega
+for (i in 1..10 downTo 1 step 2){}  ,,ulti 2 ke step me
+
+#while Loop
+val i=1
+while(cond.)
+{body}
+

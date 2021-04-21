@@ -1,0 +1,100 @@
+Python:1991(Guido Van Rossum)
+ServerSide,Software,Scripting,Mathematics Logic
+Web Developement,Handle data,
+Cross platform(W,A,L,R,etc)
+Lossly Lang.
+python --version
+python @programName
+extension .py
+py==python
+exit()
+Indentation
+x=5;y=3;z=4  #single line assign
+x=5;y="asdf"
+print(x)
+print("asdf")
+print('asdf')
+print("""asdf""")
+print('''asdf''')
+#			#Single Line comment
+"""			#Multi Line Comment
+myvar
+my_var
+_myvar
+MYVAR
+my2var
+2myvar
+my-var
+my var
+_my_var
+$myvar
+x,y,z='First','Second',"Third"
+x=y=z="First"
+x=y=434
+print(z)
++				#Concate
+x+"John"		#434John
+variable global		#Var Scope alrounder
+variable local		#Var Scope in function only
+str
+int,float,complex
+list,tuple,range	#SequenceType
+dict				#MappingType
+set,frozenset		#setType
+bool				#BooleanType
+bytes,bytearray,memoryview		#BinaryType
+type(x)				#check type of variable
+""		#str
+20		#int
+23.23	#float
+i+3j	#complex
+[,]		#list	#mutable
+(,)		#tuple	#UnMutable
+range(5)#range	#assign range (0,5) #op.range(0,5)
+{:,}	#dict	#key:value
+{,}		#Set	#Only Value Present
+frozenset({,})	#Like Set
+True	#Boolean
+b"H"	#Byte
+bytearray(5)	#make array form of byte
+memoryview(bytes(5))	#show memory
+##If i want typeCasting, So write type name
+int(),float() etc. follow up data
+$Number Start
+=>	a="Hello"
+	print(a[1])		:op=e
+=>	print(a[1:3])	:op=el
+=>	print(a[-1])	:op=o
+=>	print(a[-5:-2]	:op=Hel
+=>	print(len(a))	:op=5
+a="Hello World"
+=>	print(a.strip()):WhiteSpace Remove	:op="HelloWorld"
+=>	a.upper()
+	a.lower()
+	a.replace("H","B")	:op="Bello World"
+	a.split(" ")		:op=['Hello','World']
+	a.split("W")		:op=['Hello ','orld']
+=> txt="My name is aakash"
+		x="is" in txt	:op=True
+		x="is" not in txt	:op:False
+=>	age=21
+	name="Aakash"
+	txt="My name is {}"
+	print(txt.format(name))	#age print there
+	
+	txt="My name is {} and age {}"
+	print(txt.format(name,age))
+	
+	txt="My age is {1} and name {0}"
+	print(txt.format(name,age))
+	
+$Special Symbol Use
+\'	:using Single Quote
+\\	:using Backslash
+\n	:New Line
+\r	:Carriage Return #In String Next Line
+\t	:Tab
+\b	:Backspace		#Cut last word
+\f	:
+\ooo:Octal Value
+\xhh:

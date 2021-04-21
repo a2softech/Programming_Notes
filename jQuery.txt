@@ -1,0 +1,26 @@
+$('selector').action()
+
+<p>Hello</p>
+$('p').click();
+$('p').click(funtion(){
+		console.log("clicked");
+	})
+	
+$(document).ready(funtion(){		#Ready full page then run script
+		put all code here
+	})
+//same as 
+$(funtion(){
+		put all code here
+	})
+	
+1. element selector
+2. id selector
+3. class selector
+
+$('p').click();
+$('#oneID').click();
+$('.oneClass').click();
+$('*').click();			all select
+$('p.odd).click();		odd class select under p tag
+$('p:first').click();	select first tag in number type

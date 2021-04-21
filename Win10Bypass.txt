@@ -1,0 +1,22 @@
+Preparing Automatic Repair
+advancedOption->Troubleshoot->advancedOption->SystemImageRecovery
+click cancel
+Select a system image
+	click next
+click advanced
+click install a driver
+goTo: c/window/system32
+Utilman file ka name rename Utilman1 krna h
+cmd file ka name utilman krna h
+click cancel
+click close(icon)
+click continue
+
+open cmd:niche se hi
+whoami			:cmd me chalana h
+net user		:user ki list aa jayegi konse user ko unlock krna h
+net user hp *	:hp username h,, 
+enter
+enter
+.....
+completed,

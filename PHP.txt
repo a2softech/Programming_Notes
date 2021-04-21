@@ -1,0 +1,361 @@
+--PHP--
+Server Side Scripting Language
+Make Dynamic page contain
+Link page to each other
+PHP7
+<?php ?>
+echo "";
+Code execute in server
+HTML,CSS,JavaScript
+Hypertext Pre Processor(Personal Home Page)
+.php
+dynamic page,file:open'read'write'delete'close
+collect data
+send/receive cookies
+database operation CRUD
+Data Encryption
+Output:image/pdf/flashMovie/text/xhtml/xml
+crossPlatform/allServerSupport(Apache/IIS)
+PHP7:(New Operator <=>(Spaceship Operator))
+PHP7:Error handling
+Need:Wamp/Xamp/Lamp/Mamp(Make Local Server)
+!caseSensitivity:if/else/while/echo/class/func./user-define func.) are not caseSensitivity
+But, PHP is a caseSensitivity Language
+Comment : //     #  (Both Single Line)
+		:	/*    */   (Multi Line)
+$x = 50;		@loosely Language
+(A-z,0-9,_)
+$x,$X are two variable
+.(dot) 		@Concate
+local/global/static	@variable scope
+	global:globally assign
+	local:in function assign
+global is a keyword to assign variable in global form
+	global $x,$y;
+??Agar koi variable ko global bnana h to use hum aise likh sakte handling
+	$GLOBALS['x']
+??Static:jiski value static rahe, change hote rahe, assign kr do phir bhi change ho jaye
+	static $x = 0;
+	echo $x;
+	$x++;		op:0,1,2,...
+EchoVsPrint:no return value,print return value 1.""echo can take multiple parameter,but, print take only one parameter, Echo is faster then print
+echo""; == echo("");	@both are same
+print"";== print("");
+DataType:String,Integer,Float,Boolean,Array,Object,NULL,Resource
+String: '',""	@both we can write
+Array:$x=array("Aakash","Prakash","Vikash");
+Object:$varName= New ClassName(param,param);
+NULL:$x=null;
+var_dump($x);	@check variable type and value
+**String**
+strlen("Hello, Aakash");	op:13
+str_word_count("Hello, Aakash");	op:2
+strrev("Hello Aakash");		op:hsakaA olleH
+strpos("Hello Aakash","Aakash");	op:7
+str_replace("Aakash","Prakash","Hello Aakash");	op:Hello Prakash
+**Integer**
+var_dump(is_int($x));	@check this type is or not
+is_int($x);		@it's return boolean value
+is_float($x);
+is_finite($x);
+is_infinite($x);
+is_nan($x);	@NaN stand for Not A Number
+is_numeric($x);		@find out is a number of not, chahe vo string me bhi number likha hoga to bhi numberic hi kehlayega,
+**Casting**
+(int)$x;	@way of casting
+**Math**
+pi();	op:3.14159
+min(23,4,112,34);	op:4
+max(4,5,3,3,2,455);	op:455
+abs(-23.32);		op:23.32
+sqrt(81);			op:9
+round(0.12);		op:0
+round(1.55);		op:2
+rand();			@provide integer value
+rand(1000,9999);	@b/w under this range and both value are also cover
+**Constant**
+define(name,value,case-insensitive)
+define("X","This is a variable");	@X value is this
+define("X","This is a variable",TRUE);	@ x and X are now same
+define("Product",["Shop","Pillow","Wood"]);
+	echo Product[0];		@Constant Array
+**Operator**
+==>Arthmetic
++
+-
+*
+/
+%
+**
+==>Assignment
+=
++=
+-=
+*=
+/=
+%=		(Modulus)
+==>Comparison
+==
+===
+!=	Not EqualTo
+<>	Not EqualTo
+!==
+>
+<
+>=
+<=
+<=>	@output is -1,0,1,,if $x=5,$y=10($x<=>$y) op:-1 bcz.$x is small,if($x=10,$y=10) so op:0 , if ($x=15,$y=10) so op:1 bcz. $x is big
+**Increment/Decrement**
+++$x	@pre-increment
+$x++	@post-increment
+--$x	@pre-decrement
+$x--	$post-decrement
+**Logical**
+and
+or
+xor
+&&
+||
+!		@both are same, no differense
+**String**
+.		@Concatenation
+.=		@Concatenation Assignment (Concate and assign)($t1=t1.t2/$t1.=t2)
+**Condition Assignment
+?:		@Ternary like IfElse
+??:		@Null coalescing($x=$x??"Aakash") Agar $x me koi value nahi h, Null h vo , to usme, "Aakash" value assign ho jaye.
+**Statement**
+if(){}
+if(){}else{}
+if(){}elseif(){}else{}
+switch(n=2){
+	case 2:
+		//code
+		break;
+	default:
+		//code
+	}
+**Loops**
+while(cond.){}
+do{//this code}while(cond.);
+for(init;test;inc/dec){}
+==>foreach
+	$item=array("bath=>4","shop=>5","dettol=>3");
+	foreach($item as $x=$value){
+		echo"$x=$value <br>";
+	}
+**Break and Continue**
+break:JumpOut of Out of Loops
+continue:Skip the loop
+**Function**
+function funName(){}
+declare(strict_types=1)		@parameter type int hi hona chahiye nahi to error aa jaye
+function num(float $a,float $b):float{}		@agar int value input me aa bhi jati h to vo use float me change kr lega
+Passing Argument by Reference Variable	@parameter value ko change kr dete h, search internet
+**Array**
+$item=array("Detergent","Cloth","Laptop");
+	$item[0]	op:Detergent
+Type of Array
+	Indexed Array:Numeric Index
+	Associative Array:Array with named keys
+	MultiDimensional Array:One or More Array
+count($item);	op:3
+==>Indexed Array	@By throw index
+	$item[1]	op:Cloth
+==>Associative Array	@By throw Name Value Fetch
+	$item=array("Mobile"=>35000,"laptop"=>45000,"Bike"=>98000);
+		$item['laptop']		op:45000
+==>MultiDimensional Array	@More the one array
+	$item=array(
+		array("Name","Age","City"),
+		array("ABC","10","Bhopal"),
+		array("PQR","20","Indore"),
+		array("XYZ","30","Jabalpur")
+		);
+		$item[1][0];	op:ABC
+==>Sorting Array
+sort()		@ascending order
+rsort()		@descending order
+asort()		@Sort Associative array(Like Value Side Sort)
+ksort()		@Sort Associative array(Like Behelf of Key Side)
+arsort()
+krsort()
+**SuperGlobals Variable**
+$GLOBALS
+$_SERVER
+$_REQUEST
+$_POST
+$_GET
+$_FILES
+$_ENV
+$_COOKIE
+$_SESSION
+==>$GLOBALS['x'];	@make in function variable scope
+==>$_SERVER['PHP_SELF'];	@file ki location view,IMPORTANT chij
+==>$_REQUEST['fname'];		@input tag se data collect krne ke liye
+==>$_POST['fname'];			@input method PostMan type
+==>$_GET['fname'];			@input method URLform(1024 wordOnly)
+**Regular Expressions**
+==>preg_match($pattern,$str);
+	$str="Hello Aakash";
+	$pattern="/kash/i";		@i stand for insensitive
+	preg_match($pattern,$str);		op:1 (0/1 only op)
+==>preg_match_all($pattern,$str);	
+	$str="The rain in SPAIN falls mainly on the plains.";
+	$pattern="/ain/i";
+	preg_match_all($pattern,$str);		op:4	@count all matches case
+==>preg_replace($pattern,"New Word",$str);
+	$str="Hello Aakash";
+	$pattern="/Aa/i";
+	preg_replace($pattern,"Vi",$str);		op:Hello Vikash
+??Regular Expressions Topic ko aache se prna h
+**Form Handling**
+==>method
+	GET:is an array of variable passed to thte current script via the URL parameter.
+	POST:Throw a HTTP POST method
+	GET:2000 Character Limit,Non-sensitive data send only,never send password this method
+	POST:No Limit,all data send,secrate data sending process.
+	$_GET[];
+	$_POST[];
+**Form Validation**
+SelfPageDataFatch:<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> @data isi page pr redirect ho kr aa jayega, without any error
+	$_SERVER["PHP_SELF"]==>@its return data to itself page
+	htmlspecialchars()==>@
+	??https://www.w3schools.com/php/php_form_validation.asp  @read carefully this.
+==>htmlentities(string,flags)	@input tag me agar hacker ne script lga di to ye SQL injection se hamara database hack ho jayega, isse bachne ke liye hum, <,>,&
+==>html_entity_decode()
+==>htmlspecialchars()
+==>htmlspecialchars_decode()
+==>get_html_translation_table()		@check konse konse special symbol ko encode krta h
+==>trim($data);		@unnecessary space and enter ko remove kr deta h
+==>stripslashes($data);		@remove \(slashes)
+==>htmlspecialchars($data);		@remove special character like <,>,
+^^Program:
+	<?php
+		// define variables and set to empty values
+		$name = $email = $gender = $comment = $website = "";
+
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		  $name = test_input($_POST["name"]);
+		  $email = test_input($_POST["email"]);
+		  $website = test_input($_POST["website"]);
+		  $comment = test_input($_POST["comment"]);
+		  $gender = test_input($_POST["gender"]);
+		}
+
+		function test_input($data) {
+		  $data = trim($data);
+		  $data = stripslashes($data);
+		  $data = htmlspecialchars($data);
+		  return $data;
+		}
+	?>
+==>($_SERVER["REQUEST_METHOD"]=="POST");	@jaise hi post method se data aaye ye accept kr le
+Validate Name:if(!preg_match("/^[a-zA-Z-' ]*$/",$name)){}
+Validate Email:if(!filter_var($email, FILTER_VALIDATE_EMAIL)){}
+Validate URL:if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)){}
+^^Program
+	<?php
+		// define variables and set to empty values
+		$nameErr = $emailErr = $genderErr = $websiteErr = "";
+		$name = $email = $gender = $comment = $website = "";
+
+		if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		  if (empty($_POST["name"])) {
+			$nameErr = "Name is required";
+		  } else {
+			$name = test_input($_POST["name"]);
+			// check if name only contains letters and whitespace
+			if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+			  $nameErr = "Only letters and white space allowed";
+			}
+		  }
+
+		  if (empty($_POST["email"])) {
+			$emailErr = "Email is required";
+		  } else {
+			$email = test_input($_POST["email"]);
+			// check if e-mail address is well-formed
+			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+			  $emailErr = "Invalid email format";
+			}
+		  }
+
+		  if (empty($_POST["website"])) {
+			$website = "";
+		  } else {
+			$website = test_input($_POST["website"]);
+			// check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+			if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
+			  $websiteErr = "Invalid URL";
+			}
+		  }
+
+		  if (empty($_POST["comment"])) {
+			$comment = "";
+		  } else {
+			$comment = test_input($_POST["comment"]);
+		  }
+
+		  if (empty($_POST["gender"])) {
+			$genderErr = "Gender is required";
+		  } else {
+			$gender = test_input($_POST["gender"]);
+		  }
+		}
+	?>
+Full Form : https://www.w3schools.com/php/php_form_complete.asp
+**Date And Time**
+date();		@is a build-in Function
+date(format,timestamp);
+	format:It's required, show which type show a time
+	timestamp:
+d=Represent the day of month(01-31)	
+m=month(01-12)
+Y=Year(2002)Four Digit
+l=Day(Monday)
+date("Y/m/d");		op:2020/10/19	@We can use /,.,-,etc
+date("Y");		op:2020
+H=24-Hour Format(00-23)
+h=12-Hour Format(01-12)
+i=Minutes(00-59)
+s=Seconds(00-59)
+a=Ante/Post meridiem(AM/PM)
+date("h:i:sa");		op:01:10:52PM
+date_default_timezone_set("Asia/Calcutta");		op:2020--10--19--02--04--33--pm		@set current time
+mktime();		@create a time
+mktime(hour,minute,second,month,day,year);
+mktime(11, 14, 54, 8, 12, 2014);
+strtotime();	@convert string to time, it's human readable date string function
+strtotime(time,now);
+	$d=strtotime("10:30pm April 15 2014");
+	date("Y-m-d h:i:sa", $d);
+	$d=strtotime("tomorrow");
+	echo date("Y-m-d h:i:sa", $d) . "<br>";		op:2020-10-20 12:00:00am
+	$d=strtotime("next Saturday");
+	echo date("Y-m-d h:i:sa", $d) . "<br>";		op:2020-10-24 12:00:00am
+	$d=strtotime("+3 Months");
+	echo date("Y-m-d h:i:sa", $d) . "<br>";		op:2021-01-19 08:41:51am
+??strtotime();		important chij h :@https://www.w3schools.com/php/php_date.asp
+**Include/Require
+include 'filename';		@agar file me kuch error h phir bhi chalegi
+require 'filename';		@agar file me kuch error h to file yahi pr stop ho jayegi or error show kregi
+**File handling**
+readfile();
+readfile("filename.excution");		@File ko read kr lega@koi si bhi file ko read krva sakte h, like, html,txt,ect.
+fopen();		@open file
+fopen("filename",Modes);	@mode like r=read i.e
+r=read only
+w=write only/first erases all contain
+a=append
+x=create a new file for write only
+r+=read and write
+w+=read and write/first erases all contain
+a+=read and append contain
+x+=create new file read/write. if already file exist then show error
+fread();
+fread($myfile,filesize("filename"));
+fclose();
+fclose(filename);??
+fgets();		@read single line
+feof();			@ek ek line fetch hote jaye jb tk file ka contain khatam na ho jaye
+fgetc();		@read single character
