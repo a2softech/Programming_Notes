@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="showtime"></h1>
+
+</body>
+
+</html>
+<script>
+    let student = {
+        fname: "aakash ",
+        lname: " Pawar",
+        marksheet: function() {
+            console.log("name is " + this.fname + "and last name is" + this.lname);
+        }
+    };
+    student.marksheet();
+
+    setInterval(function() {
+        console.log(Date());
+        document.getElementById("showtime").innerHTML = Date();
+    }, 1000);
+
+
+
+    // console.log(Date());
+
+    // console.log(student.fname);
+</script>

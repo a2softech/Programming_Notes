@@ -8,13 +8,13 @@ let x = 'Hello'; #valid
 let _x= 'Hello'; #valid
 let $x= 'Hello'; #valid
 let 1x= 'Hello'; #inValid
-let new='Hello'; #inValid
+let new='Hello'; #inValid //becouse new is a keyword
 let x="Hiy"; #Case-Sensitive
 let X="Hiy"; #Case-Sensitive(Both Diff)
 let new=4;   #error bcz.new is keyword
 const x=5;   #its as a final word,constant
 const x;	 #Error
-string--"",'',``,${var_name}
+string--"",'',``,${var_name}		// ` is a back quote
 number--
 bigint
 boolean
