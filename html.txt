@@ -1,0 +1,119 @@
+html- hyper text markup lang.
+release - 1989
+html5 First publish - 2008
+html5 stable with feature - 2014
+	multimedia
+notepad
+extension - .html, .htm
+<!DOCTYPE html>
+html
+head
+title
+body
+tag/element - html, head, h1, p
+h1-h6
+p
+pre
+br
+hr
+attribute - href, src, title, alt, style, width, height
+img
+float = use in image right left
+src
+alt
+style
+width
+height
+style="property:value;"			#format of CSS
+style="color:red";
+style="background-color:blue";
+style="font-size:50px";
+style="font-family:sans-sarif";
+style="text-align:center";
+style="margin:20px";		#outside space
+style="padding:20px";		#inside space
+style="background-image: url('img_girl.jpg');	#Use Background Image
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+  	background-size: cover;
+lang="en"		#write in head
+a
+href
+target="_blank"
+target="_self"
+<a href="mailto:someone@example.com">Send email</a> 	#click to send mail
+<b> - Bold text
+<strong> - Bold text
+<i> - Italic text
+<em> - Italic text
+<mark> - Highlight Yellow
+<small> - Smaller text
+<del> - Deleted text
+<ins> - Inserted text  		#underline
+<sub> - Subscript text 		#CO2 (Chemistry)
+<sup> - Superscript text 	#X2 (Square Maths)
+address
+bdo - right to left content
+comment - <!--  This is Comment     -->
+style="background-color:rgb(255, 99, 71); 		#make different color
+style="background-color:rgba(255, 99, 71, 0.5);		# a mean transparancy
+style="border: 2px solid powderblue;			#outside border
+Inline CSS = Write in tag with style attribute
+Internal CSS = Write in head section within style tag
+External CSS = Write in saperate file 
+	<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.jpg"> 		#Favicon
+----TABLE----
+<table>		Defines a table
+<th>		Defines a header cell in a table
+<tr>		Defines a row in a table
+<td>		Defines a cell in a table
+<caption>	Defines a table caption
+<colgroup>	Specifies a group of one or more columns in a table for formatting
+<col>		Specifies column properties for each column within a <colgroup> element
+<thead>		Groups the header content in a table
+<tbody>		Groups the body content in a table
+<tfoot>		Groups the footer content in a table
+colspan		merge column
+rowspan		merge row
+ol
+ul
+li
+type="a",type="A",type="1",type="i",type="I",
+div - block full line
+span - no property no value
+Class - .    {}
+id - same as class
+iframe - make a frame
+file path - ./ ..
+head - meta, style, script, lang, 
+layout - header, nav, aside, section, article, footer
+responsive - viewport
+computer code 
+<code>
+<samp>
+<kbd>
+&nbsp; - make space 
+&copy; - make copyright
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
